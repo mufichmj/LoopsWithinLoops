@@ -165,7 +165,10 @@ def decreasing_exclamation_marks(m, n):
     #   in this or the other problems in this module, as doing so
     #   would defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
-
+    for k in range(m):
+        for j in range(n - k + m):
+            print('!', end='')
+        print()
 
 def run_test_alternating_brackets():
     """ Tests the    alternating_brackets    function. """
