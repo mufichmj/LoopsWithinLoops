@@ -173,7 +173,12 @@ def sum_numbers(seq_seq):
     # TODO: 4. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
-
+    sum = 0
+    for k in range(len(seq_seq)):
+        sub_seq = seq_seq[k]
+        for j in range(len(sub_seq)):
+            sum = sum + sub_seq[k]
+    return sum
 
 def run_test_print_characters():
     """ Tests the    print_characters    function. """
