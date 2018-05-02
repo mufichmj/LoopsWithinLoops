@@ -86,18 +86,30 @@ def draw_L(window, circle, r, c):
     original_x = circle.center.x
     original_y = circle.center.y
     radius = circle.radius
-
-    x = original_x
+    fill_color = circle.fill_color
+    thickness = 3
     y = original_y
+
     for k in range(r):
-        for j in range(c):
+        for j in range(thickness):
+            x = original_x + (radius * 2 * k)
             new_circle = rg.Circle(rg.Point(x, y), radius)
+            new_circle.fill_color = fill_color
             new_circle.attach_to(window)
             window.render(.1)
 
-            x = x + (radius * 2)
+        y = y + (radius*2)
+
+    for k in range(thickness):
+        for j in range(c + thickness):
+            x = original_x + (radius * 2 * k)
+            new_circle = rg.Circle(rg.Point(x, y), radius)
+            new_circle.fill_color = fill_color
+            new_circle.attach_to(window)
+            window.render(.1)
+
         y = y + (radius * 2)
-        x = original_x
+
 
 
 def run_test_draw_wall_on_right():
