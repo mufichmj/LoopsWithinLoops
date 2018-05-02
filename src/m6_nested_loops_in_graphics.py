@@ -80,7 +80,7 @@ def draw_L(window, circle, r, c):
     and m and n are small, positive integers.
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
     original_x = circle.center.x
@@ -92,7 +92,7 @@ def draw_L(window, circle, r, c):
 
     for k in range(r):
         for j in range(thickness):
-            x = original_x + (radius * 2 * k)
+            x = original_x + (radius * 2 * j)
             new_circle = rg.Circle(rg.Point(x, y), radius)
             new_circle.fill_color = fill_color
             new_circle.attach_to(window)
@@ -102,7 +102,7 @@ def draw_L(window, circle, r, c):
 
     for k in range(thickness):
         for j in range(c + thickness):
-            x = original_x + (radius * 2 * k)
+            x = original_x + (radius * 2 * j)
             new_circle = rg.Circle(rg.Point(x, y), radius)
             new_circle.fill_color = fill_color
             new_circle.attach_to(window)
