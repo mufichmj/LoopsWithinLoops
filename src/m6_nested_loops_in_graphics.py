@@ -151,6 +151,19 @@ def draw_wall_on_right(rectangle, n, window):
     # TODO: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
+    r_center = rectangle.get_center()
+    r_width = rectangle.get_width()
+    r_height = rectangle.get_height()
+    r_y_center = r_center.y
+
+    for k in range(n):
+        r_x_center = r_center.x
+        for j in range(k + 1):
+            corner_1 =
+            corner_2 =
+            new_rect = rg.Rectangle(corner_1, corner_2)
+            new_rect.attach_to(window)
+            window.render(.01)
 
 
 # ----------------------------------------------------------------------
