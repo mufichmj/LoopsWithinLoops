@@ -159,12 +159,13 @@ def draw_wall_on_right(rectangle, n, window):
     for k in range(n):
         r_x_center = r_center.x
         for j in range(k + 1):
-            corner_1 =
-            corner_2 =
+            corner_1 = rg.Point(r_x_center + (r_width / 2), r_y_center + (r_height / 2))
+            corner_2 = rg.Point(r_x_center + (r_width / 2), r_y_center + (r_height / 2))
             new_rect = rg.Rectangle(corner_1, corner_2)
             new_rect.attach_to(window)
             window.render(.01)
-
+            r_x_center = r_x_center - r_width
+        r_y_center = r_y_center + r_height
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
